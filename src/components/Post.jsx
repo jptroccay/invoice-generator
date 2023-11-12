@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Pdf from "./PDF";
+import Pdf from "./Pdf";
 
 const Post = () => {
   const [pv, setPv] = useState("");
