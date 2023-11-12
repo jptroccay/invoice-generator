@@ -97,7 +97,7 @@ const Post = () => {
           <h2 className="text-center font-bold text-2xl my-4">
             Invoice Generator
           </h2>
-          <form method="post" onSubmit={handleSubmit}>
+          <form className="container" method="post" onSubmit={handleSubmit}>
             <div className="w-full flex-col justify-center gap-12">
               <div>
                 <input
@@ -116,9 +116,9 @@ const Post = () => {
                   autoComplete="off"
                 />
               </div>
-              <div className="flex flex-row justify-center gap-4">
+              <div className="flex flex-row justify-center w-full">
                 {/* SELLER */}
-                <div >
+                <div className="w-full mr-4">
                   <h3>Datos Vendedor</h3>
                   <div>
                     <input
@@ -169,7 +169,7 @@ const Post = () => {
                   </div>
                 </div>
                 {/* CLIENT */}
-                <div>
+                <div className="w-full">
                   <h3>Datos Cliente</h3>
                   <div className="">
                     <input

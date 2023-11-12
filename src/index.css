@@ -5,7 +5,7 @@
 
 
 input {
-    @apply p-4 w-full my-2 focus:outline-none border rounded-xl
+    @apply p-4 w-full my-2 focus:outline-none border rounded-xl 
 }
 
 textarea {
