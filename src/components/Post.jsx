@@ -8,7 +8,7 @@ const Post = () => {
   const [company, setCompany] = useState("");
   const [cuit, setCuit] = useState("");
   const [iibb, setIibb] = useState("");
-  const [companyIva, setCompanyIva] = useState("");
+  const [companyIva, setCompanyIva] = useState("Monotributista");
   const [address, setAddress] = useState("");
   const [dateInicio, setDateInicio] = useState("");
   // const [image, setImage] = useState("");
