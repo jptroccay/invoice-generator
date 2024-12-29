@@ -33,14 +33,17 @@ const Pdf = ({ data }) => {
                 <tr>
                   <td className="w-full align-top">
                     <div>
-                      <img
-                        // src="https://menkoff.com/assets/brand-sample.png"
-                        src={logo}
-                        className="h-12 object-cover"
-                      />
+                      {data.logo ? (
+                        <img
+                          src={data.logo}
+                          alt="Logo"
+                          className="h-12 object-cover"
+                        />
+                      ) : (
+                        <p className="text-gray-500">Sin Logo</p>
+                      )}
                     </div>
                   </td>
-
                   <td className="align-top">
                     <div className="text-sm">
                       <table className="border-collapse border-spacing-0">

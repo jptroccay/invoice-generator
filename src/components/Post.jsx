@@ -11,6 +11,7 @@ const Post = () => {
   const [companyIva, setCompanyIva] = useState("Monotributista");
   const [address, setAddress] = useState("");
   const [dateInicio, setDateInicio] = useState("");
+  const [logo, setLogo] = useState(null); // Estado para almacenar la imagen
   // const [image, setImage] = useState("");
 
   const [client, setClient] = useState("");
@@ -73,6 +74,14 @@ const Post = () => {
     });
   };
 
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const imageUrl = URL.createObjectURL(file);
+      setLogo(imageUrl); // Guardar la URL de la imagen seleccionada
+    }
+  };
+
   const data = {
     pv,
     number,
@@ -89,6 +98,7 @@ const Post = () => {
     clientAddress,
     productsOptions,
     iva,
+    logo,
   };
   return (
     <>
@@ -99,6 +109,18 @@ const Post = () => {
           </h2>
           <form className="container" method="post" onSubmit={handleSubmit}>
             <div className="w-full flex-col justify-center gap-12">
+              <div className="my-4">
+                <label htmlFor="logo" className="block font-bold">
+                  Subir Logo
+                </label>
+                <input
+                  id="logo"
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageChange}
+                />
+              </div>
+
               <div>
                 <input
                   onChange={(e) => setPv(e.target.value)}
