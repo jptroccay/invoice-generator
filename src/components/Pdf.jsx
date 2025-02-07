@@ -15,7 +15,7 @@ const Pdf = ({ data }) => {
   const year = today.getFullYear();
   const date = today.getDate();
 
-  console.log(date, month, year);
+  //console.log(date, month, year);
   // console.log(data.productsOptions);
   const { toPDF, targetRef } = usePDF({ filename: "Invoice.pdf" });
   return (

@@ -122,6 +122,7 @@ const Post = () => {
               </div>
 
               <div>
+                <label className="text-gray-800">Punto de venta</label>
                 <input
                   onChange={(e) => setPv(e.target.value)}
                   type="number"
@@ -131,6 +132,7 @@ const Post = () => {
               </div>
 
               <div>
+                <label className="text-gray-800">Número de factura</label>
                 <input
                   onChange={(e) => setNumber(e.target.value)}
                   type="number"
@@ -142,7 +144,8 @@ const Post = () => {
                 {/* SELLER */}
                 <div className="w-full mr-4">
                   <h3>Datos Vendedor</h3>
-                  <div>
+                  <div className="mt-4">
+                    <label className="text-gray-800">Nombre</label>
                     <input
                       onChange={(e) => setCompany(e.target.value)}
                       type="text"
@@ -151,6 +154,7 @@ const Post = () => {
                     />
                   </div>
                   <div>
+                    <label className="text-gray-800">Número de C.U.I.T</label>
                     <input
                       onChange={(e) => setCuit(e.target.value)}
                       type="number"
@@ -159,6 +163,7 @@ const Post = () => {
                     />
                   </div>
                   <div>
+                    <label className="text-gray-800">Ingresos Brutos</label>
                     <input
                       onChange={(e) => setIibb(e.target.value)}
                       type="number"
@@ -167,6 +172,7 @@ const Post = () => {
                     />
                   </div>
                   <div>
+                    <label className="text-gray-800">Dirección</label>
                     <input
                       onChange={(e) => setAddress(e.target.value)}
                       type="text"
@@ -174,6 +180,7 @@ const Post = () => {
                     />
                   </div>
                   <div>
+                    <label className="text-gray-800">Régimen tributario</label>
                     <select onChange={(e) => setCompanyIva(e.target.value)}>
                       <option value="Monotributusta">Monotributusta</option>
                       <option value="Responsable Inscripto">
@@ -182,6 +189,7 @@ const Post = () => {
                     </select>
                   </div>
                   <div>
+                    <label className="text-gray-800">Fecha de emisión</label>
                     <input
                       onChange={(e) => setDateInicio(e.target.value)}
                       type="date"
@@ -193,15 +201,17 @@ const Post = () => {
                 {/* CLIENT */}
                 <div className="w-full">
                   <h3>Datos Cliente</h3>
-                  <div className="">
+                  <div className="mt-4">
+                    <label className="text-gray-800">Nombre</label>
                     <input
                       onChange={(e) => setClient(e.target.value)}
                       type="text"
-                      placeholder="Cliente/empresa"
+                      placeholder="Cliente/Empresa"
                       autoComplete="off"
                     />
                   </div>
                   <div>
+                    <label className="text-gray-800">Dirección</label>
                     <input
                       onChange={(e) => setClientAddress(e.target.value)}
                       type="text"
@@ -210,6 +220,7 @@ const Post = () => {
                     />
                   </div>
                   <div>
+                    <label className="text-gray-800">DNI</label>
                     <input
                       onChange={(e) => setClientDni(e.target.value)}
                       type="number"
@@ -218,6 +229,7 @@ const Post = () => {
                     />
                   </div>
                   <div>
+                    <label className="text-gray-800">Régimen tributario</label>
                     <select onChange={(e) => setClientIva(e.target.value)}>
                       <option value="Consumidor final">Consumidor final</option>
                       <option value="Monotributusta">Monotributusta</option>
@@ -227,6 +239,7 @@ const Post = () => {
                     </select>
                   </div>
                   <div>
+                    <label className="text-gray-800">Forma de pago</label>
                     <select onChange={(e) => setPago(e.target.value)}>
                       <option value="Efectivo">Efectivo</option>
                       <option value="Débito">Débito</option>
@@ -239,7 +252,7 @@ const Post = () => {
 
             <div className="flex flex-col gap-2">
               {/* PRODUCT */}
-              <label>Productos</label>
+              <label className="text-gray-800">Productos</label>
               {productsOptions.length > 0 &&
                 productsOptions.map((product, index) => (
                   <div
@@ -247,6 +260,9 @@ const Post = () => {
                     key={index}
                   >
                     <div className="flex flex-col w-full my-2">
+                      <label className="hidden lg:flex">
+                        Nombre del producto
+                      </label>
                       <input
                         className="border-color-black shadow-xl px-3 py-2 w-full focus:outline-none border"
                         type="text"
@@ -256,6 +272,9 @@ const Post = () => {
                       />
                     </div>
                     <div className="flex flex-col w-full my-2">
+                      <label className="hidden lg:flex">
+                        Precio del producto
+                      </label>
                       <input
                         className="border-color-black shadow-xl px-3 py-2  w-full focus:outline-none border"
                         type="number"
@@ -265,6 +284,9 @@ const Post = () => {
                       />
                     </div>
                     <div className="flex flex-col w-full my-2">
+                      <label className="hidden lg:flex">
+                        Cantidad del producto
+                      </label>
                       <input
                         className="border-color-black shadow-xl px-3 py-2  w-full focus:outline-none border"
                         type="number"
@@ -322,7 +344,7 @@ const Post = () => {
             </div>
 
             {/* <div className="flex flex-col w-full my-2">
-              <label>IVA %</label>
+              <label className="text-gray-800">IVA %</label>
               <input
                 className="border-color-black shadow-xl px-3 py-2  w-full focus:outline-none border"
                 type="number"
